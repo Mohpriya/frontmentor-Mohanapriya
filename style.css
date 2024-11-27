@@ -25,8 +25,10 @@ body{
     min-height: 100vh;
 }
 .card{
-    width: 300px;
+    width: 400px;
     position: relative;
+    left: 50px;
+    align-items: center;
     text-align: center;
     background-color: white;
     border-radius: 10px;
@@ -41,10 +43,10 @@ body{
     position: absolute;
     width: 100px;
     height: 100px;
-    border: 2px solid white;
+    border: 5px solid white;
     border-radius: 50%;
     top: 100px;
-    left: 100px;
+    left: 140px;
 }
 .card-actions{
     display: flex;
@@ -62,4 +64,63 @@ h5{
 }
 .light-gray{
     color: hsl(0, 0%, 59%);
+}
+.card-actions p{
+    font-size: 12px;
+}
+@media  only screen and (max-width: 705px) and (orientation: portrait) {
+    .card{
+        width: 250px;
+        position: relative;
+        left: 120px;
+        right: 150px;
+        bottom: 50px;
+        align-items: center;
+        text-align: center;
+        background-color: white;
+        border-radius: 10px;
+}
+.card img{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 5px solid white;
+    border-radius: 50%;
+    top: 100px;
+    left: 70px;
+}
+}
+@media  screen and (max-width: 1000px) and (orientation: landscape) {
+    .card{
+        width: 200px;
+        position: relative;
+        left: 50px;
+        align-items: center;
+        text-align: center;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .card-top{
+        background-image: url("./images/bg-pattern-card.svg");
+        height: 50px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .card img{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border: 5px solid white;
+        border-radius: 50%;
+        top: 30px;
+        left: -40px;
+    }
+    .card-actions{
+        display: flex;
+        justify-content: space-around;
+        padding-top: 20px;
+        margin-top: 40px;
+        border-top: 2px solid rgba(180, 177, 177, 0.455);
+        margin-bottom: 20px;
+    }
 }
